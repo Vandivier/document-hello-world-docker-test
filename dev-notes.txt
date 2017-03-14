@@ -1,0 +1,9 @@
+Dockerfile ref:
+https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images
+
+Dockerfile goal:
+1 - install node
+1.5? npm install
+2 - install mongodb
+3 - conduct a unit test where you make 2 users, 2 docs, and switch owners
+4 - launch on web where u can make more owners and docs and switch owners
