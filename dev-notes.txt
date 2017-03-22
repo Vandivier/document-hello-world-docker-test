@@ -27,3 +27,15 @@ https://hashnode.com/post/react-tutorial-using-mern-stack-ciiyus9m700qqge53mer0i
 https://www.mkyong.com/mongodb/mongodb-hello-world-example/
 http://doduck.com/node-js-mongodb-hello-world-example/
 http://mern.io/
+
+170321 23:19
+- MERN seed 1 is not a good seed: It's a half-built starter for a tutorial.
+- MERN seed 2 looks good but Mongo must be installed prior to running. Installing Mongo "Current Stable Release (3.4.2)"
+ - It says version: for Windows Server 2008 R2 64-bit, .msi file
+ - per this dude, that's OK for Windows 10 as well: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
+ - Installed fine but not on PATH. I had to add this to PATH:
+    - C:\Program Files\MongoDB\Server\3.4\bin
+    - some PATH help: https://www.youtube.com/watch?v=R7tDp0wUqvs
+    - be sure to edit system PATH not user PATH / env variables
+    - now run 'mongo' and you get version info! success, it's in CLI
+
