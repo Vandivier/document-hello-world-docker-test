@@ -38,4 +38,12 @@ http://mern.io/
     - some PATH help: https://www.youtube.com/watch?v=R7tDp0wUqvs
     - be sure to edit system PATH not user PATH / env variables
     - now run 'mongo' and you get version info! success, it's in CLI
+    - received an error on npm start, noticed it's bc i need to start mongod:
+Error: MongoError: failed to connect to server [localhost:27017] on first connect [MongoError: connect ECONNREFUSED 127.0.0.1:27017]
+solution, per PATH help above and http://stackoverflow.com/questions/13312358/mongo-couldnt-connect-to-server-127-0-0-127017
+    - create folder \data\db under MongoDB installation folder, sibling of bin folder
+    - run mongod --dbpath C:\Program Files\MongoDB\Server\3.4\data\db
+    - REAL FIX: http://stackoverflow.com/questions/20796714/how-do-i-start-mongo-db-from-windows
+    - plus a GUI tool...neato
 
+  - now just `npm start`! visit localhost:8000
