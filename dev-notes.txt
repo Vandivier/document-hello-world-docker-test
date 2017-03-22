@@ -13,12 +13,17 @@ objective: A React + Redux app where you create an abstract item (maybe a task o
 There are users which can be assigned to the tasks and they can be transfered, edited, etc.
 Data is persisted in Mongo and deployed via Dockerfile (using codefresh atm)
 
-React + Redux base app:
+React + Redux seed:
 https://github.com/jchapron/redux-friendlist-demo/tree/v1.0
 
-Mongo:
-https://hashnode.com/post/react-tutorial-using-mern-stack-ciiyus9m700qqge53mer0isxz
+MERN seed 1 (Mongo Express React Node):
+https://github.com/vasansr/react-tutorial-mern
 
+MERN seed 2:
+https://github.com/Hashnode/mern-starter
+
+Other sources [referred to, not seeds]:
+https://hashnode.com/post/react-tutorial-using-mern-stack-ciiyus9m700qqge53mer0isxz
 https://www.mkyong.com/mongodb/mongodb-hello-world-example/
 http://doduck.com/node-js-mongodb-hello-world-example/
 http://mern.io/
