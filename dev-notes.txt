@@ -47,3 +47,5 @@ solution, per PATH help above and http://stackoverflow.com/questions/13312358/mo
     - plus a GUI tool...neato
 
   - now just `npm start`! visit localhost:8000
+
+  - Installed Studio 3T non-commercial/free/core as a Mongo GUI
