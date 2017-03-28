@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import styles from './FriendListApp.css';
+import styles from './FriendsList.css';
 import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
+//import { connect } from 'react-redux';
 
-import * as FriendsActions from '../../actions/FriendsActions';
-import { FriendList, AddFriendInput } from '../../components';
+import * as FriendsActions from './FriendsListActions';
+import { FriendsList, AddFriendInput } from './components';
 
 /*
 //TODO: is the @connect pattern cool or nah?
@@ -16,7 +16,7 @@ import { FriendList, AddFriendInput } from '../../components';
 }))
 */
 
-export default class FriendListApp extends Component {
+export default class FriendsListApp extends Component {
 
   static propTypes = {
     friendsById: PropTypes.object.isRequired,
@@ -36,9 +36,9 @@ export default class FriendListApp extends Component {
 
     return (
       <div className={styles.friendListApp}>
-        <h1>The FriendList</h1>
+        <h1>The FriendsList</h1>
         <AddFriendInput addFriend={actions.addFriend} />
-        <FriendList friends={friendsById} actions={actions} />
+        <FriendsList friends={friendsById} actions={actions} />
       </div>
     );
   }

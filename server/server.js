@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import path from 'path';
 import IntlWrapper from '../client/modules/Intl/IntlWrapper';
-import FriendListApp from '../client/modules/FriendListApp/FriendListApp';
+import FriendsListApp from '../client/modules/FriendsList/FriendsList';
 
 // Webpack Requirements
 import webpack from 'webpack';
@@ -124,7 +124,7 @@ app.use((oRequest, oResponse, next) => {
       .then(() => {
         const initialView = renderToString(
           <Provider store={store}>
-            {() => <FriendListApp /> }
+            {() => <FriendsListApp /> }
             <IntlWrapper>
               <RouterContext {...renderProps} />
             </IntlWrapper>

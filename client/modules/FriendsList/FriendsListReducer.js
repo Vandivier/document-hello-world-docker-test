@@ -1,7 +1,4 @@
-import * as types from '../constants/ActionTypes';
-import omit from 'lodash/object/omit';
-import assign from 'lodash/object/assign';
-import mapValues from 'lodash/object/mapValues';
+import * as types from './constants/ActionTypes';
 
 const initialState = {
   friends: [1, 2, 3],
@@ -42,15 +39,15 @@ export default function friends(state = initialState, action) {
       return {
         ...state,
         friends: state.friends.filter(id => id !== action.id),
-        friendsById: omit(state.friendsById, action.id)
+        friendsById: state.friendsById.filter(item => item !== action.id)
       }
 
     case types.STAR_FRIEND:
       return {
         ...state,
-        friendsById: mapValues(state.friendsById, (friend) => {
+        friendsById: state.friendsById.map((friend) => {
           return friend.id === action.id ?
-            assign({}, friend, { starred: !friend.starred }) :
+            Object.assign({}, friend, { starred: !friend.starred }) :
             friend
         })
       }
