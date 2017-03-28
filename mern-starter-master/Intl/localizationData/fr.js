@@ -4,7 +4,7 @@ export default {
     siteTitle: 'MERN blog de démarrage',
     addPost: 'Ajouter Poster',
     switchLanguage: 'Changer de langue',
-    twitterMessage: 'Sur John Vandivier',
+    siteMessage: 'Sur John Vandivier',
     by: 'Par',
     deletePost: 'Supprimer le message',
     createNewPost: 'Créer un nouveau message',
