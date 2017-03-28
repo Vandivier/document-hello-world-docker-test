@@ -50,3 +50,7 @@ solution, per PATH help above and http://stackoverflow.com/questions/13312358/mo
 
   - Installed Studio 3T non-commercial/free/core as a Mongo GUI
   - added react dev tools extension to chrome
+
+3/28: adopting features-as-modules architecture
+https://jaysoo.ca/2016/02/28/organizing-redux-application/
+http://engineering.kapost.com/2016/01/organizing-large-react-applications/
