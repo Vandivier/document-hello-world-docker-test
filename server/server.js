@@ -124,7 +124,6 @@ app.use((oRequest, oResponse, next) => {
       .then(() => {
         const initialView = renderToString(
           <Provider store={store}>
-            {() => <FriendsListApp /> }
             <IntlWrapper>
               <RouterContext {...renderProps} />
             </IntlWrapper>

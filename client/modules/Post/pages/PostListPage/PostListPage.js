@@ -1,7 +1,19 @@
 import React, { PropTypes, Component } from 'react';
 import { connect } from 'react-redux';
 
+/* TODO: merge data state into the other store and then try calling <FriendListApp />
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+
+const reducer = combineReducers(friendsListReducers);
+const friendsListStore = createStore(reducer);*/
+        /*<Provider store={friendsListStore}>
+          {() => <FriendListApp /> }
+        </Provider>
+*/
+
 // Import Components
+import FriendsListApp from '../../../FriendsList/FriendsList';
 import PostList from '../../components/PostList';
 import PostCreateWidget from '../../components/PostCreateWidget/PostCreateWidget';
 
@@ -12,6 +24,7 @@ import { toggleAddPost } from '../../../App/AppActions';
 // Import Selectors
 import { getShowAddPost } from '../../../App/AppReducer';
 import { getPosts } from '../../PostReducer';
+import * as friendsListReducers from '../../../FriendsList/FriendsListReducer';
 
 class PostListPage extends Component {
   componentDidMount() {
