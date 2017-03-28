@@ -103,14 +103,14 @@ const renderError = err => {
 };
 
 // Server Side Rendering based on routes matched by React-router.
-app.use((req, res, next) => {
-  match({ routes, location: req.url }, (err, redirectLocation, renderProps) => {
+app.use((oRequest, oResponse, next) => {
+  match({ routes, location: oRequest.url }, (err, redirectLocation, renderProps) => {
     if (err) {
-      return res.status(500).end(renderError(err));
+      return oResponse.status(500).end(renderError(err));
     }
 
     if (redirectLocation) {
-      return res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+      return oResponse.redirect(302, redirectLocation.pathname + redirectLocation.search);
     }
 
     if (!renderProps) {
@@ -130,7 +130,7 @@ app.use((req, res, next) => {
         );
         const finalState = store.getState();
 
-        res
+        oResponse
           .set('Content-Type', 'text/html')
           .status(200)
           .end(renderFullPage(initialView, finalState));
