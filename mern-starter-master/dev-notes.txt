@@ -1,3 +1,8 @@
+# document-hello-world-docker-test
+A hello world app which generates random documents users can transfer them
+
+TODO: merge README and dev-notes then clean up.
+
 Dockerfile ref:
 https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images
 
