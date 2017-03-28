@@ -16,10 +16,7 @@ Data is persisted in Mongo and deployed via Dockerfile (using codefresh atm)
 React + Redux seed:
 https://github.com/jchapron/redux-friendlist-demo/tree/v1.0
 
-MERN seed 1 (Mongo Express React Node):
-https://github.com/vasansr/react-tutorial-mern
-
-MERN seed 2:
+MERN seed:
 https://github.com/Hashnode/mern-starter
 
 Other sources [referred to, not seeds]:
@@ -28,8 +25,6 @@ https://www.mkyong.com/mongodb/mongodb-hello-world-example/
 http://doduck.com/node-js-mongodb-hello-world-example/
 http://mern.io/
 
-170321 23:19
-- MERN seed 1 is not a good seed: It's a half-built starter for a tutorial.
 - MERN seed 2 looks good but Mongo must be installed prior to running. Installing Mongo "Current Stable Release (3.4.2)"
  - It says version: for Windows Server 2008 R2 64-bit, .msi file
  - per this dude, that's OK for Windows 10 as well: https://code.msdn.microsoft.com/Mongo-Database-setup-on-6963f46f
@@ -49,3 +44,4 @@ solution, per PATH help above and http://stackoverflow.com/questions/13312358/mo
   - now just `npm start`! visit localhost:8000
 
   - Installed Studio 3T non-commercial/free/core as a Mongo GUI
+  - added react dev tools extension to chrome
