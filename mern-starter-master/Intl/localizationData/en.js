@@ -4,7 +4,7 @@ export default {
     siteTitle: 'MERN Starter Blog',
     addPost: 'Add Post',
     switchLanguage: 'Switch Language',
-    twitterMessage: 'We are on Twitter',
+    siteMessage: 'About John Vandivier',
     by: 'By',
     deletePost: 'Delete Post',
     createNewPost: 'Create new post',
