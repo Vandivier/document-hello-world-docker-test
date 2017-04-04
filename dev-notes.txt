@@ -54,3 +54,10 @@ solution, per PATH help above and http://stackoverflow.com/questions/13312358/mo
 3/28: adopting features-as-modules architecture
 https://jaysoo.ca/2016/02/28/organizing-redux-application/
 http://engineering.kapost.com/2016/01/organizing-large-react-applications/
+
+4/3
+  - the weird style syntax is bc the app uses CSS Modules + React.
+  - https://github.com/css-modules/css-modules
+  - See Jake Trent's Pluralsight Course "Styling React Components" for a good overview.
+  - the app also uses PostCss, which is neato
+

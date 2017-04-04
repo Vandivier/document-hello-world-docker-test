@@ -14,6 +14,9 @@ import Footer from './components/Footer/Footer';
 import { toggleAddPost } from './AppActions';
 import { switchLanguage } from '../../modules/Intl/IntlActions';
 
+// Import Selectors
+import { getShowAddPost } from './AppReducer';
+
 export class App extends Component {
   constructor(props) {
     super(props);
@@ -51,6 +54,7 @@ export class App extends Component {
           <Header
             switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
             intl={this.props.intl}
+            showAddPost={this.props.showAddPost}
             toggleAddPost={this.toggleAddPostSection}
           />
           <div className={styles.container}>
@@ -73,6 +77,7 @@ App.propTypes = {
 function mapStateToProps(store) {
   return {
     intl: store.intl,
+    showAddPost: getShowAddPost(store),
   };
 }
 

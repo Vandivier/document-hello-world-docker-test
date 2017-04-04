@@ -10,6 +10,8 @@ export function Header(props, context) {
     lang => <li key={lang} onClick={() => props.switchLanguage(lang)} className={lang === props.intl.locale ? styles.selected : ''}>{lang}</li>
   );
 
+  const clsAnchor = `${styles['add-post-button']} ${props.showAddPost ? styles.dimmed : ''}`;
+
   return (
     <div className={styles.header}>
       <div className={styles['language-switcher']}>
@@ -24,7 +26,9 @@ export function Header(props, context) {
         </h1>
         {
           context.router.isActive('/', true)
-            ? <a className={styles['add-post-button']} href="#" onClick={props.toggleAddPost}><FormattedMessage id="addPost" /></a>
+            ? <a className={clsAnchor} href="#" onClick={props.toggleAddPost}>
+                <FormattedMessage id="addPost" />
+              </a>
             : null
         }
       </div>
