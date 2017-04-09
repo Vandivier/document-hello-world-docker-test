@@ -61,3 +61,8 @@ http://engineering.kapost.com/2016/01/organizing-large-react-applications/
   - See Jake Trent's Pluralsight Course "Styling React Components" for a good overview.
   - the app also uses PostCss, which is neato
 
+4/9
+  - organization is a bit outdated; once stable upgrade to react-redux-router v5.0^
+    - some cool boilerplates from Google or here https://github.com/gaearon/react-hot-loader/blob/master/docs/README.md#starter-kits
+  - check out DevTools extension http://extension.remotedev.io/ per https://github.com/davezuko/react-redux-starter-kit
+
