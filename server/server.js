@@ -3,8 +3,6 @@ import compression from 'compression';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import path from 'path';
-import IntlWrapper from '../client/modules/Intl/IntlWrapper';
-import FriendsListApp from '../client/modules/FriendsList/FriendsList';
 
 // Webpack Requirements
 import webpack from 'webpack';
@@ -23,7 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // React And Redux Setup
-import { configureStore } from '../client/store';
+import { configureStore, CONSTS } from '../client/store';
 import { Provider } from 'react-redux';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -36,6 +34,10 @@ import { fetchComponentData } from './util/fetchData';
 import posts from './routes/post.routes';
 import dummyData from './dummyData';
 import serverConfig from './config';
+
+// Import components
+import IntlWrapper from '../client/containers/Intl/IntlWrapper';
+//import FriendsListApp from containers + '/FriendsList/FriendsList';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;

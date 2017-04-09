@@ -64,5 +64,17 @@ http://engineering.kapost.com/2016/01/organizing-large-react-applications/
 4/9
   - organization is a bit outdated; once stable upgrade to react-redux-router v5.0^
     - some cool boilerplates from Google or here https://github.com/gaearon/react-hot-loader/blob/master/docs/README.md#starter-kits
+    - or, a 2017 article: https://habd.as/awesome-react-boilerplates/
+    - top 3:
+      - uses react-router-redux, from Cory House - https://github.com/coryhouse/react-slingshot/blob/master/package.json
+      - leading redux kit, no react-router-redux yet, fractal architecture/Application Structure - https://github.com/davezuko/react-redux-starter-kit
+      - leading react kit, no redux, feature-first application structure - https://github.com/react-boilerplate/react-boilerplate
+      - I like the react-boilerplate structure most
+  - react login flow: https://github.com/mxstbr/login-flow
   - check out DevTools extension http://extension.remotedev.io/ per https://github.com/davezuko/react-redux-starter-kit
-
+  - containers are data containers; they are the data context for a component
+    - two features may use a generic container to render different components; so it is a different layer
+    - this makes containers top-level components; features actually extend or inherent some container
+    - but, we still call them containers not just components to point out they are special and have no parents other than store
+    - dumb components don't need containers; /public-subcomponents are all dumb bc smart top level would be a /container
+    - but, there are /private-dumb-subcomponents and /private-smart-subcomponents

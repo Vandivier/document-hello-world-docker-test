@@ -2,22 +2,27 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 // Import Style
-import styles from './App.css';
+import styles from './HomePage.css';
+
+//const containers = props.store.CONSTS.containers || './components/';  //can't access props outside of Component because of super(props);
+const CONTAINERS = './containers/';
+const DUMB = './containers/';
 
 // Import Components
 import Helmet from 'react-helmet';
-import DevTools from './components/DevTools';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import DevTools from '../../util/DevTools';
+let Header = require(CONTAINERS + 'Header/Header');
+let Footer = require(CONTAINERS + 'Footer/Footer');
 
 // Import Actions
-import { toggleAddPost } from './AppActions';
-import { switchLanguage } from '../../modules/Intl/IntlActions';
+import { toggleAddPost } from './HomePageActions';
+//import { switchLanguage } from CONTAINERS + 'Intl/IntlActions';
+let switchLanguage = require(CONTAINERS + 'Footer/Footer')['switchLanguage'];
 
 // Import Selectors
-import { getShowAddPost } from './AppReducer';
+import { getShowAddPost } from './HomePageReducer';
 
-export class App extends Component {
+export class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = { isMounted: false };
@@ -37,8 +42,8 @@ export class App extends Component {
         {this.state.isMounted && !window.devToolsExtension && process.env.NODE_ENV === 'development' && <DevTools />}
         <div>
           <Helmet
-            title="MERN Starter - Blog App"
-            titleTemplate="%s - Blog App"
+            title="MERN Starter - Blog HomePage"
+            titleTemplate="%s - Blog HomePage"
             meta={[
               { charset: 'utf-8' },
               {
@@ -67,7 +72,7 @@ export class App extends Component {
   }
 }
 
-App.propTypes = {
+HomePage.propTypes = {
   children: PropTypes.object.isRequired,
   dispatch: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired,
@@ -81,4 +86,4 @@ function mapStateToProps(store) {
   };
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(HomePage);

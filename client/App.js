@@ -4,7 +4,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, browserHistory } from 'react-router';
-import IntlWrapper from './modules/Intl/IntlWrapper';
+import IntlWrapper from './containers/Intl/IntlWrapper';
 
 // Import Routes
 import routes from './routes';
@@ -16,7 +16,7 @@ export default function App(props) {
   return (
     <Provider store={props.store}>
       <IntlWrapper>
-        <Router history={browserHistory}>
+        <Router history={browserHistory} CONSTS={props.store.CONSTS}>
           {routes}
         </Router>
       </IntlWrapper>
