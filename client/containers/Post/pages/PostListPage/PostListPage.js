@@ -19,10 +19,10 @@ import PostCreateWidget from '../../components/PostCreateWidget/PostCreateWidget
 
 // Import Actions
 import { addPostRequest, fetchPosts, deletePostRequest } from '../../PostActions';
-import { toggleAddPost } from '../../../App/AppActions';
+import { toggleAddPost } from '../../../HomePage/HomePageActions';
 
 // Import Selectors
-import { getShowAddPost } from '../../../App/AppReducer';
+import { getShowAddPost } from '../../../HomePage/HomePageReducer';
 import { getPosts } from '../../PostReducer';
 import * as friendsListReducers from '../../../FriendsList/FriendsListReducer';
 
