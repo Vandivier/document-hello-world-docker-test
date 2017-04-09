@@ -4,20 +4,15 @@ import { connect } from 'react-redux';
 // Import Style
 import styles from './HomePage.css';
 
-//const containers = props.store.CONSTS.containers || './components/';  //can't access props outside of Component because of super(props);
-const CONTAINERS = './containers/';
-const DUMB = './containers/';
-
 // Import Components
 import Helmet from 'react-helmet';
 import DevTools from '../../util/DevTools';
-let Header = require(CONTAINERS + 'Header/Header');
-let Footer = require(CONTAINERS + 'Footer/Footer');
+import Header from './private-subcomponents/Header/Header';
+import Footer from './private-subcomponents/Footer/Footer';
 
 // Import Actions
 import { toggleAddPost } from './HomePageActions';
-//import { switchLanguage } from CONTAINERS + 'Intl/IntlActions';
-let switchLanguage = require(CONTAINERS + 'Footer/Footer')['switchLanguage'];
+import { switchLanguage } from '../../containers/Intl/IntlActions';
 
 // Import Selectors
 import { getShowAddPost } from './HomePageReducer';

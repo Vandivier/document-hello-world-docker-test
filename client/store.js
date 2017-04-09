@@ -6,16 +6,7 @@ import thunk from 'redux-thunk';
 import DevTools from './util/DevTools';
 import rootReducer from './reducers';
 
-export let CONSTS = {
-  containers: './containers',
-  dumbKids: './private-dumb-subcomponents',
-  kids: './private-subcomponents',
-  smartKids: '/private-smart-subcomponents'
-}
-
-export const TEST = 'test';
-
-export function configureStore(initialState = CONSTS) {
+export function configureStore(initialState = {}) {
   // Middleware and store enhancers
   const enhancers = [
     applyMiddleware(thunk),
