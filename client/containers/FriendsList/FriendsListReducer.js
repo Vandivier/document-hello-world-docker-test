@@ -18,7 +18,7 @@ const initialState = {
   }
 };
 
-export default function friends(state = initialState, action) {
+export default function FriendsListReducer(state = initialState, action) {
   switch (action.type) {
 
     case types.ADD_FRIEND:

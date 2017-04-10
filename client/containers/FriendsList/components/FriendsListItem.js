@@ -13,7 +13,7 @@ export default class FriendsListItem extends Component {
 
   render () {
     return (
-      <li className={styles.friendListItem}>
+      <li className={styles.friendsListItem}>
         <div className={styles.friendInfos}>
           <div><span>{this.props.name}</span></div>
           <div><small>xx friends in common</small></div>
