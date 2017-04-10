@@ -16,14 +16,11 @@ export default class FriendsListItem extends Component {
       <li className={styles.friendsListItem}>
         <div className={styles.friendInfos}>
           <div><span>{this.props.name}</span></div>
-          <div><small>xx friends in common</small></div>
         </div>
         <div className={styles.friendActions}>
-          <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.starFriend(this.props.id)}>
-            <i className={classnames('fa', { 'fa-star': this.props.starred }, { 'fa-star-o': !this.props.starred })} />
+          <button className={`${styles.btnStar}`} onClick={() => this.props.starFriend(this.props.id)}>
           </button>
-          <button className={`btn btn-default ${styles.btnAction}`} onClick={() => this.props.deleteFriend(this.props.id)}>
-            <i className="fa fa-trash" />
+          <button className={`${styles.btnTrash}`} onClick={() => this.props.deleteFriend(this.props.id)}>
           </button>
         </div>
       </li>

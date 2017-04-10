@@ -5,8 +5,8 @@ import FriendsListItem from './FriendsListItem';
 
 export default class FriendsList extends Component {
   static propTypes = {
-    friends: PropTypes.object.isRequired,
-    actions: PropTypes.object.isRequired
+    friends: PropTypes.array.isRequired,
+    actions: PropTypes.object.isRequired,
   }
 
   render () {
@@ -25,5 +25,4 @@ export default class FriendsList extends Component {
       </ul>
     );
   }
-
 }

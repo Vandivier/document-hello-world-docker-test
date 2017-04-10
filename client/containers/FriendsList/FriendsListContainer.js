@@ -8,7 +8,6 @@ import * as FriendsActions from './FriendsListContainerActions';
 import { FriendsList, AddFriendInput } from './components';
 
 export class FriendsListContainer extends Component {
-
   constructor (props, context) {
     super(props, context);
     this.state = {
@@ -17,15 +16,15 @@ export class FriendsListContainer extends Component {
   }
 
   render () {
-    //const { friendsList: { friendsById }, dispatch } = this.props;  //TODO: rewrite to match the other components
-    
     const actions = bindActionCreators(FriendsActions, this.props.dispatch);
+
+    console.log(...this.props.friendsList);
 
     return (
       <div className={styles.friendsListApp}>
         <h1>The FriendsList</h1>
         <AddFriendInput addFriend={actions.addFriend} />
-        <FriendsList friends={this.props.friendsList.friends} actions={actions} />
+        <FriendsList {...this.props.friendsList} actions={actions} />
       </div>
     );
   }

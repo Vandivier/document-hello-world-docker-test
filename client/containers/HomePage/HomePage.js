@@ -82,7 +82,7 @@ HomePage.propTypes = {
 
 // Retrieve data from store as props
 function mapStateToProps(store) {
-  console.log(store);
+  //console.log(store);
   return {
     friendsList: store.friendsList,
     intl: store.intl,

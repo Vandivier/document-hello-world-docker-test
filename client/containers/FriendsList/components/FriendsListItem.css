@@ -18,9 +18,23 @@
   flex: 0 0 90px;
 }
 
-:local(.btnAction), :local(.btnAction):active, :local(.btnAction):focus, :local(.btnAction):hover {
+btnAction, :local(.btnAction), :local(.btnAction):active, :local(.btnAction):focus, :local(.btnAction):hover {
+  width: 50px;
+  height: 20px;
   margin-right: 5px;
   color: #5C75B0;
+  border: 0px;
+  border-radius: 4px;
+}
+
+:local(.btnStar) {
+  composes: btnAction;
+  background-color: #f4f47a;
+}
+
+:local(.btnTrash) {
+  composes: btnAction;
+  background-color: #e83a6f;
 }
 
 button:focus {
