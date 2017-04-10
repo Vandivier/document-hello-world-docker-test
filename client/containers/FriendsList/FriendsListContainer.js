@@ -1,10 +1,10 @@
 //TODO: rename this file FriendsListContainer
 import React, { Component, PropTypes } from 'react';
-import styles from './FriendsList.css';
+import styles from './FriendsListContainer.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import * as FriendsActions from './FriendsListActions';
+import * as FriendsActions from './FriendsListContainerActions';
 import { FriendsList, AddFriendInput } from './components';
 
 export class FriendsListContainer extends Component {

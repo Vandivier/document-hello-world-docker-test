@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // React And Redux Setup
-import { configureStore, CONSTS } from '../client/store';
+import { configureStore } from '../client/store';
 import { Provider } from 'react-redux';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -37,7 +37,6 @@ import serverConfig from './config';
 
 // Import components
 import IntlWrapper from '../client/containers/Intl/IntlWrapper';
-//import FriendsListApp from containers + '/FriendsList/FriendsList';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -83,7 +82,10 @@ const renderFullPage = (html, initialState) => {
         <link rel="shortcut icon" href="http://res.cloudinary.com/hashnode/image/upload/v1455629445/static_imgs/mern/mern-favicon-circle-fill.png" type="image/png" />
       </head>
       <body>
-        <div id="root">${html}</div>
+
+        <!-- Why the extra div? ref: http://stackoverflow.com/questions/33521047/warning-react-attempted-to-reuse-markup-in-a-container-but-the-checksum-was-inv -->
+        <div id="root"><div>${html}</div></div>
+
         <script>
           window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
           ${process.env.NODE_ENV === 'production' ?
@@ -91,6 +93,7 @@ const renderFullPage = (html, initialState) => {
           window.webpackManifest = ${JSON.stringify(chunkManifest)};
           //]]>` : ''}
         </script>
+
         <script src='${process.env.NODE_ENV === 'production' ? assetsManifest['/vendor.js'] : '/vendor.js'}'></script>
         <script src='${process.env.NODE_ENV === 'production' ? assetsManifest['/app.js'] : '/app.js'}'></script>
       </body>

@@ -78,3 +78,13 @@ http://engineering.kapost.com/2016/01/organizing-large-react-applications/
     - but, we still call them containers not just components to point out they are special and have no parents other than store
     - dumb components don't need containers; /public-subcomponents are all dumb bc smart top level would be a /container
     - but, there are /private-dumb-subcomponents and /private-smart-subcomponents
+
+argh this shit is litterally not possible:
+let containers = './containers/';
+import HomePage from containers + 'HomePage/HomePage';
+
+even if I use require() or System.imports() with SystemJS, none of that shit allows me to use the variable containers
+  but I want to make importing DRY and centrally maintain folder location strings :( :(
+
+Component-first architecture > feature-first architecture bc latter extends former.
+
